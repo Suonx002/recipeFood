@@ -1,0 +1,33 @@
+.category-card {
+  &__item {
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    // border: 2px solid #eee;
+    border-radius: 5px;
+    // margin-bottom: 1rem;
+  }
+
+  &__name {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 5;
+    color: #eee;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: 1rem;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 5px;
+    filter: brightness(70%);
+    transition: transform 0.3s ease-in;
+
+    &:hover {
+      filter: brightness(100%);
+      transform: scale(1.02);
+    }
+  }
+}
