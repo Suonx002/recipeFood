@@ -1,0 +1,37 @@
+.searchbar {
+  &__form {
+    width: 50rem;
+    font-size: 1.6rem;
+    color: #161616;
+  }
+
+  &__input {
+    width: 80%;
+    transition: border 0.3s ease-in-out;
+  }
+
+  &__btn {
+    width: 18%;
+    text-align: center;
+    margin-left: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #eee;
+    }
+  }
+
+  &__input,
+  &__btn {
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    outline: none;
+    border: 2px solid #eee;
+  }
+
+  &__input:focus {
+    border: 2px solid #ddd;
+  }
+}

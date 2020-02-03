@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 2px solid #eee;
+
+  &__logo {
+    margin-right: 20%;
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 1rem;
+
+    &:link,
+    &:visited {
+      color: #27ae60;
+      transition: color 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: #2ecc71;
+    }
+  }
+}
