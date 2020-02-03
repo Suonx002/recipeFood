@@ -3,23 +3,40 @@
     width: 50rem;
     font-size: 1.6rem;
     color: #161616;
+
+    @media screen and (max-width: 33em) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__input {
-    width: 80%;
+    width: 40rem;
     transition: border 0.3s ease-in-out;
+
+    @media screen and (max-width: 33em) {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
   }
 
   &__btn {
-    width: 18%;
+    width: 8rem;
     text-align: center;
     margin-left: 1rem;
     background-color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: #eee;
+      outline: none;
+    }
+
+    @media screen and (max-width: 33em) {
+      width: 100%;
+      margin-left: 0;
     }
   }
 

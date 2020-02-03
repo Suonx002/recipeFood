@@ -19,5 +19,15 @@
     &:hover {
       color: #2ecc71;
     }
+
+    @media screen and (max-width: 50em) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 50em) {
+    flex-direction: column;
+    justify-content: center;
   }
 }
