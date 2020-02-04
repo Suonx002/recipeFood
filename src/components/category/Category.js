@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import seafood from './../../assets/img/seafood.jpg';
 import beef from './../../assets/img/beef.jpg';
@@ -16,22 +17,34 @@ const Category = () => {
       <h1 className='category__title'>Popular Category</h1>
       <div className='category__list'>
         <div className='category__item'>
-          <CategoryCard imageSrc={seafood} name='seafood' />
+          <Link to='/category/seafood'>
+            <CategoryCard imageSrc={seafood} name='seafood' />
+          </Link>
         </div>
         <div className='category__item'>
-          <CategoryCard imageSrc={beef} name='beef' />
+          <Link to='/category/beef'>
+            <CategoryCard imageSrc={beef} name='beef' />
+          </Link>
         </div>
         <div className='category__item'>
-          <CategoryCard imageSrc={chicken} name='chicken' />
+          <Link to='/category/chicken'>
+            <CategoryCard imageSrc={chicken} name='chicken' />
+          </Link>
         </div>
         <div className='category__item'>
-          <CategoryCard imageSrc={pasta} name='pasta' />
+          <Link to='/category/pasta'>
+            <CategoryCard imageSrc={pasta} name='pasta' />
+          </Link>
         </div>
         <div className='category__item'>
-          <CategoryCard imageSrc={pork} name='pork' />
+          <Link to='/category/pork'>
+            <CategoryCard imageSrc={pork} name='pork' />
+          </Link>
         </div>
         <div className='category__item'>
-          <CategoryCard imageSrc={lamb} name='lamb' />
+          <Link to='/category/lamb'>
+            <CategoryCard imageSrc={lamb} name='lamb' />
+          </Link>
         </div>
       </div>
     </div>

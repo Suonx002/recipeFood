@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 import Navbar from './components/navbar/Navbar';
 import Category from './components/category/Category';
+import CategoryList from './components/category/CategoryList';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/' component={Category} />
+          <Route exact path='/category/:id' component={CategoryList} />
         </Switch>
       </div>
     </div>
