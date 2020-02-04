@@ -29,10 +29,11 @@ const CategoryItem = props => {
       setError('No result with this id. Please try a different one!');
     }
   };
+  console.log(item);
 
   return (
     <div className='category-item'>
-      {error !== '' && <h3 className='category-item__error'>{error}</h3>}
+      {error !== '' && <p className='category-item__error'>{error}</p>}
       {item.length !== null &&
         item.map(meal => (
           <div className='category-item__list' id={meal.idMeal}>
@@ -77,7 +78,9 @@ const CategoryItem = props => {
                 Video Instruction
               </h3>
               <iframe
-                src='https://www.youtube.com/embed/E7wJTI-1dvQ'
+                src={`https://www.youtube.com/embed/${
+                  meal.strYoutube.split('=')[1]
+                }`}
                 frameBorder='0'
                 allow='autoplay; encrypted-media'
                 allowFullScreen

@@ -12,6 +12,11 @@
     flex-wrap: wrap;
   }
 
+  &__error {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
   &__img {
     width: 40rem;
     height: 40rem;

@@ -10,13 +10,14 @@ import lamb from './../../assets/img/lamb.jpg';
 
 import './Category.scss';
 import CategoryCard from './CategoryCard';
+import uuid from 'uuid/v4';
 
 const Category = () => {
   return (
     <div className='category'>
       <h1 className='category__title'>Popular Category</h1>
       <div className='category__list'>
-        <div className='category__item'>
+        <div className='category__item' id={uuid()}>
           <Link to='/category/seafood'>
             <CategoryCard imageSrc={seafood} name='seafood' />
           </Link>

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import CategoryCard from './CategoryCard';
 
 import './CategoryList.scss';
+import uuid from 'uuid/v4';
 
 const CategoryList = props => {
   const [meals, setMeals] = useState([]);
@@ -30,7 +31,11 @@ const CategoryList = props => {
 
   return (
     <div className='category-list'>
-      {error.length !== 0 && <p className='category-list__error'>{error}</p>}
+      {error.length !== 0 && (
+        <p className='category-list__error' id={uuid()}>
+          {error}
+        </p>
+      )}
       {meals.length !== 0 &&
         meals !== null &&
         meals.map(meal => (
