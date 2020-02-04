@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+
 import CategoryIngredient from './CategoryIngredient';
+
+import './CategoryItem.scss';
 
 const CategoryItem = props => {
   const [error, setError] = useState('');
@@ -29,14 +32,16 @@ const CategoryItem = props => {
 
   return (
     <div className='category-item'>
+      {error !== '' && <h3 className='category-item__error'>{error}</h3>}
       {item.length !== null &&
         item.map(meal => (
           <div className='category-item__list' id={meal.idMeal}>
             <img
               src={meal.strMealThumb}
               alt={meal.strMeal}
-              className='caregory-item__img'
+              className='category-item__img'
             />
+
             <div className='category-item__content'>
               <div className='category-item__info'>
                 <h3 className='category-item__title'>{meal.strMeal}</h3>
@@ -56,6 +61,30 @@ const CategoryItem = props => {
               <div className='category-item__ingredient'>
                 <CategoryIngredient meal={meal} />
               </div>
+              <div className='category-item__btn'>
+                <a
+                  href={meal.strSource}
+                  className='category-item__viewmore'
+                  target='_blank'
+                  rel='noopener noreferrer'>
+                  Visit Website
+                </a>
+              </div>
+            </div>
+
+            <div className='category-item__youtube'>
+              <h3 className='category-item__youtube--title'>
+                Video Instruction
+              </h3>
+              <iframe
+                src='https://www.youtube.com/embed/E7wJTI-1dvQ'
+                frameBorder='0'
+                allow='autoplay; encrypted-media'
+                allowFullScreen
+                title='video'
+                width='100%'
+                height='500'
+              />
             </div>
           </div>
         ))}

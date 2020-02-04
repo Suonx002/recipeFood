@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './CategoryIngredient.scss';
+
 const CategoryIngredient = props => {
   const { meal } = props;
   const ingredients = [];
@@ -15,8 +17,8 @@ const CategoryIngredient = props => {
     }
   }
 
-  console.log(ingredients);
-  console.log(meal);
+  // console.log(ingredients);
+  // console.log(meal);
 
   return (
     <div className='category-ingredient'>

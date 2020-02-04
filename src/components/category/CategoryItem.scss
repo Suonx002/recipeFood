@@ -1,0 +1,76 @@
+.category-item {
+  padding: 2rem;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  border-top: 0;
+  margin-bottom: 2rem;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 2rem;
+    flex: 35%;
+  }
+
+  &__content {
+    flex: 55%;
+  }
+
+  &__youtube {
+    flex: 100%;
+    margin-top: 2rem;
+  }
+
+  &__title {
+    font-size: 2.6rem;
+  }
+
+  &__category,
+  &__area,
+  &__instruction {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    span {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__btn {
+    text-align: center;
+  }
+  &__viewmore {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+      border: 2px solid #eee;
+      border-radius: 100px;
+      color: #27ae60;
+      outline: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: rgba(#27ae60, 0.9);
+      background-color: #eee;
+    }
+  }
+
+  &__youtube {
+    &--title {
+      margin-top: 2rem;
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

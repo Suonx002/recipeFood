@@ -1,0 +1,19 @@
+.category-ingredient {
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    border: 2px solid #eee;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0 2rem;
+    border-radius: 5px;
+  }
+
+  &__item {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
