@@ -5,6 +5,7 @@ import './App.scss';
 import Navbar from './components/navbar/Navbar';
 import Category from './components/category/Category';
 import CategoryList from './components/category/CategoryList';
+import CategoryItem from './components/category/CategoryItem';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Category} />
           <Route exact path='/category/:id' component={CategoryList} />
+          <Route exact path='/category/:id/:mealId' component={CategoryItem} />
         </Switch>
       </div>
     </div>

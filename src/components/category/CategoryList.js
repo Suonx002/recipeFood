@@ -35,13 +35,10 @@ const CategoryList = props => {
         meals !== null &&
         meals.map(meal => (
           <Link
+            id={meal.idMeal}
             to={`/category/${props.match.params.id}/${meal.idMeal}`}
             className='category-list__item'>
-            <CategoryCard
-              imageSrc={meal.strMealThumb}
-              name={meal.strMeal}
-              id={meal.idMeal}
-            />
+            <CategoryCard imageSrc={meal.strMealThumb} name={meal.strMeal} />
           </Link>
         ))}
     </div>
